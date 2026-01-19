@@ -1,8 +1,8 @@
 {
   "name": "flatcap-theme",
-  "displayName": "Flat-Cap Theme",
-  "description": "A Flat-Cap theme for VSCode",
-  "version": "1.0.4",
+  "displayName": "Flatcap Theme",
+  "description": "A dark, minimalist, and eye-friendly design system for VS Code.",
+  "version": "1.1.0",
   "publisher": "cheycron",
   "license": "MIT",
   "galleryBanner": {
@@ -12,10 +12,10 @@
   "icon": "images/logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cheycron/flat-cap-vscode"
+    "url": "https://github.com/cheycron/flatcap-vscode"
   },
   "author": {
-    "name": "Cheycron Blaine",
+    "name": "Leonardo Anibal Chocron",
     "email": "cheycron@gmail.com",
     "url": "https://cheycron.com"
   },
@@ -30,11 +30,19 @@
     "dark",
     "flat",
     "minimal",
-    "clean"
+    "clean",
+    "flatcap",
+    "nord",
+    "eye-friendly"
   ],
   "contributes": {
     "themes": [
-      { "label": "Flatcap", "uiTheme": "vs-dark", "path": "./themes/flatcap.theme.json" }
+      {
+        "label": "Flatcap",
+        "uiTheme": "vs-dark",
+        "path": "./themes/flatcap.theme.json"
+      }
     ]
-  }
+  },
+  "packageManager": "npm@11.6.2+sha512.ee22b335fcbc95662cdf3ab8a053daf045d9cf9c6df6040d28965abb707512b2c16fa6c5eec049d34c74f78f390cebd14f697919eadb97756564d4f9eccc4954"
 }
