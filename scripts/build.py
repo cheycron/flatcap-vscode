@@ -13,7 +13,7 @@ Outputs: themes/flatcap-slate.theme.json      Flatcap Slate  (vs-dark)
          themes/flatcap-legacy.theme.json     the v1 name "Flatcap", an alias of Slate (see README)
          package.json                         only version, galleryBanner and contributes.themes
          README.md                            only the blocks between <!-- build:NAME --> markers
-         docs/mapping.md                      same markers: full role mapping and syntax tables (not in the VSIX)
+         docs/mapping.md                      same markers: areas, role mapping, syntax, ANSI and contrast tables (not in the VSIX)
 
 No hex value is written by hand: every color is a Flatcap role, optionally with an alpha percentage.
 Python 3.10+, standard library only. Output is deterministic.
@@ -531,9 +531,9 @@ def md_groups(theme: dict) -> str:
     return "\n".join(rows)
 
 
-README_BLOCKS = {"settings": md_settings, "fonts": md_fonts, "groups": md_groups, "ansi": md_ansi,
-                 "contrast": md_contrast}
-DOC_BLOCKS = {"mapping": md_mapping, "syntax": md_syntax}
+README_BLOCKS = {"settings": md_settings, "fonts": md_fonts}
+DOC_BLOCKS = {"groups": md_groups, "mapping": md_mapping, "syntax": md_syntax, "ansi": md_ansi,
+              "contrast": md_contrast}
 
 
 def render_blocks(path: Path, blocks: dict, theme: dict) -> str:
