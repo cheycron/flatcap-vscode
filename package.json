@@ -1,12 +1,12 @@
 {
   "name": "flatcap-theme",
   "displayName": "Flatcap Theme",
-  "description": "A dark, minimalist, and eye-friendly design system for VS Code.",
-  "version": "1.1.0",
+  "description": "Quiet precision for VS Code: Flatcap Slate (dark) and Flatcap Daylight (light), two matte, semantic themes with one mineral-blue accent.",
+  "version": "2.0.0",
   "publisher": "cheycron",
   "license": "MIT",
   "galleryBanner": {
-    "color": "#121418",
+    "color": "#191D22",
     "theme": "dark"
   },
   "icon": "images/logo.png",
@@ -20,29 +20,52 @@
     "url": "https://cheycron.com"
   },
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Themes"
   ],
   "keywords": [
-    "elegant",
-    "dark",
-    "flat",
-    "minimal",
-    "clean",
     "flatcap",
-    "nord",
-    "eye-friendly"
+    "theme",
+    "color-theme",
+    "dark",
+    "light",
+    "slate",
+    "daylight",
+    "minimal",
+    "flat",
+    "matte",
+    "accessible",
+    "quiet precision"
   ],
   "contributes": {
     "themes": [
       {
-        "label": "Flatcap",
+        "label": "Flatcap Slate",
         "uiTheme": "vs-dark",
-        "path": "./themes/flatcap.theme.json"
+        "path": "./themes/flatcap-slate.theme.json"
+      },
+      {
+        "label": "Flatcap Daylight",
+        "uiTheme": "vs",
+        "path": "./themes/flatcap-daylight.theme.json"
+      },
+      {
+        "id": "Flatcap",
+        "label": "Flatcap (v1 name, now Slate)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/flatcap-legacy.theme.json"
       }
     ]
   },
-  "packageManager": "npm@11.6.2+sha512.ee22b335fcbc95662cdf3ab8a053daf045d9cf9c6df6040d28965abb707512b2c16fa6c5eec049d34c74f78f390cebd14f697919eadb97756564d4f9eccc4954"
+  "packageManager": "npm@11.6.2+sha512.ee22b335fcbc95662cdf3ab8a053daf045d9cf9c6df6040d28965abb707512b2c16fa6c5eec049d34c74f78f390cebd14f697919eadb97756564d4f9eccc4954",
+  "homepage": "https://github.com/cheycron/flatcap-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/cheycron/flatcap-vscode/issues"
+  },
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "check": "python3 scripts/build.py --check"
+  }
 }
